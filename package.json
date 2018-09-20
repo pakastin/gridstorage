@@ -1,6 +1,6 @@
 {
   "name": "gridstorage",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "GridFS + Mongoose helper",
   "main": "index.js",
   "dependencies": {},
