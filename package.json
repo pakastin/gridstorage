@@ -5,8 +5,19 @@
   "main": "index.js",
   "dependencies": {},
   "devDependencies": {},
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Juha Lindstedt",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pakastin/gridstorage.git"
+  },
+  "keywords": [
+    "gridfs",
+    "mongoose"
+  ],
+  "bugs": {
+    "url": "https://github.com/pakastin/gridstorage/issues"
+  },
+  "homepage": "https://github.com/pakastin/gridstorage#readme"
 }
