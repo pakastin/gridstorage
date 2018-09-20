@@ -28,11 +28,11 @@ if (await videoBucket.count(filename) > 0) {
 
 ### Bucket.find(...args) : Promise –> Cursor
 
-### Bucket.download(filename, options) : Promise –> GridFSBucketReadStream
+### Bucket.download(filename, options) : GridFSBucketReadStream
 
-### Bucket.downloadById(id, options) : Promise –> GridFSBucketReadStream
+### Bucket.downloadById(id, options) : GridFSBucketReadStream
 
-### Bucket.upload(filename, metadata) : Promise –> GridFSBucketWriteStream
+### Bucket.upload(filename, metadata) : GridFSBucketWriteStream
 
 ### Bucket.rename(id, filename, callback) : Promise
 
