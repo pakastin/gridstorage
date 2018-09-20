@@ -10,8 +10,9 @@ npm i gridstorage
 ### new Storage(mongoose) : Storage
 ```js
 const Storage = require('gridstorage');
+const mongoose = require('mongoose');
 
-const storage = new Storage('mongoose');
+const storage = new Storage(mongoose);
 ```
 
 ### Storage.bucket(bucketName) : Bucket
