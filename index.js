@@ -26,7 +26,7 @@ class Bucket {
     return this.bucket.openDownloadStream(id, options);
   }
   upload (filename, metadata) {
-    return this.bucket.openUploadStreamByName(filename, metadata);
+    return this.bucket.openUploadStream(filename, metadata);
   }
   rename (id, filename, callback) {
     return this.bucket.rename(id, filename, callback);
