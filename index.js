@@ -1,10 +1,9 @@
 module.exports = class Storage {
   constructor (mongoose) {
     this.mongoose = mongoose;
-    this.buckets = {};
   }
   bucket (bucketName) {
-    return this.buckets[bucketName] || (this.buckets[bucketName] = new Bucket(this.mongoose, bucketName));
+    return new Bucket(this.mongoose, bucketName);
   }
 };
 
