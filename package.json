@@ -1,0 +1,12 @@
+{
+  "name": "gridstorage",
+  "version": "1.0.0",
+  "description": "GridFS + Mongoose helper",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+  },
+  "author": "Juha Lindstedt",
+  "license": "ISC"
+}
