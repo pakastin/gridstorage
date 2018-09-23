@@ -1,14 +1,21 @@
 module.exports = class Storage {
   constructor (mongo, db) {
-    if ('mongo' in mongo) {
+    console.log(!!mongo.mongo);
+    if (mongo.mongo) {
       // Support Mongoose
-      const mongoose = mongo;
-      this.mongo = mongoose.mongo;
-      this.db = mongoose.connection.db;
-      return;
+      this.mongoose = mongo;
+      this.mongo = this.mongoose.mongo;
+    } else {
+      this.mongo = mongo;
+      this._db = db;
     }
-    this.mongo = mongo;
-    this.db = db;
+  }
+  get db () {
+    if (this._db) {
+      return this._db;
+    } else {
+      return this.mongoose.connection.db;
+    }
   }
   bucket (bucketName) {
     return new Bucket(this.mongo, this.db, bucketName);
