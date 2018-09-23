@@ -1,15 +1,23 @@
 module.exports = class Storage {
-  constructor (mongoose) {
-    this.mongoose = mongoose;
+  constructor (mongo, db) {
+    if ('mongo' in mongo) {
+      // Support Mongoose
+      const mongoose = mongo;
+      this.mongo = mongoose.mongo;
+      this.db = mongoose.connection.db;
+      return;
+    }
+    this.mongo = mongo;
+    this.db = db;
   }
   bucket (bucketName) {
-    return new Bucket(this.mongoose, bucketName);
+    return new Bucket(this.mongo, this.db, bucketName);
   }
 };
 
 class Bucket {
-  constructor (mongoose, bucketName) {
-    this.bucket = new mongoose.mongo.GridFSBucket(mongoose.connection.db, {
+  constructor (mongo, db, bucketName) {
+    this.bucket = new mongo.GridFSBucket(db, {
       bucketName
     });
   }

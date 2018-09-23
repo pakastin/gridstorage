@@ -7,6 +7,19 @@ npm i gridstorage
 ```
 
 ## API
+### new Storage(mongodb) : Storage
+```js
+const Storage = require('gridstorage');
+const mongo = require('mongodb');
+const { MongoClient } = mongodb
+
+MongoClient.connect(uri, (err, db) => {
+  if (err) {
+    throw new Error(err);
+  }
+  const storage = new Storage(mongo, db);
+```
+To use with Mongoose:
 ### new Storage(mongoose) : Storage
 ```js
 const Storage = require('gridstorage');
