@@ -1,6 +1,8 @@
 # gridstorage
 GridFS + Mongoose helper
 
+**DEPRECATED**
+
 ## Installation
 ```
 npm i gridstorage
